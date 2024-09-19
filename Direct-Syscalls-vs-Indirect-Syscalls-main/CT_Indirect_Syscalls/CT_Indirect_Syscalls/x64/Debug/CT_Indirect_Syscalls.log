@@ -1,0 +1,3 @@
+﻿  Assembling syscalls.asm...
+  CT_Indirect_Syscalls.c
+  CT_Indirect_Syscalls.vcxproj -> C:\Users\sungy\Desktop\injection\Direct-Syscalls-vs-Indirect-Syscalls-main\CT_Indirect_Syscalls\x64\Debug\CT_Indirect_Syscalls.exe
