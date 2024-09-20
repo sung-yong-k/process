@@ -1,0 +1,4 @@
+﻿  Assembling hellsgate.asm...
+  main.c
+C:\Users\sungy\Desktop\injection\TartarusGate-master\TartarusGate-master\HellsGate\main.c(271,9): warning C4090: 'initialisation' : différents qualificateurs 'const'
+  HellsGate.vcxproj -> C:\Users\sungy\Desktop\injection\TartarusGate-master\TartarusGate-master\x64\Debug\HellsGate.exe
