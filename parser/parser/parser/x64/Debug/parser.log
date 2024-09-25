@@ -1,0 +1,10 @@
+﻿  parser.cpp
+C:\Users\sungy\Desktop\injection\parser\parser\parser.cpp(16,5): error C2061: erreur de syntaxe : identificateur 'POBJECT_ATTRIBUTES'
+C:\Users\sungy\Desktop\injection\parser\parser\parser.cpp(53,38): warning C4312: 'cast de type' : la conversion de 'DWORD' en 'HANDLE' d'une taille supérieure
+C:\Users\sungy\Desktop\injection\parser\parser\parser.cpp(56,13): error C2065: 'OBJECT_ATTRIBUTES' : identificateur non déclaré
+C:\Users\sungy\Desktop\injection\parser\parser\parser.cpp(56,31): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'objAttr'
+C:\Users\sungy\Desktop\injection\parser\parser\parser.cpp(56,31): error C2065: 'objAttr' : identificateur non déclaré
+C:\Users\sungy\Desktop\injection\parser\parser\parser.cpp(57,41): error C2065: 'objAttr' : identificateur non déclaré
+C:\Users\sungy\Desktop\injection\parser\parser\parser.cpp(57,13): error C3861: 'InitializeObjectAttributes' : identificateur introuvable
+C:\Users\sungy\Desktop\injection\parser\parser\parser.cpp(60,84): error C2065: 'objAttr' : identificateur non déclaré
+C:\Users\sungy\Desktop\injection\parser\parser\parser.cpp(62,27): error C2065: 'STATUS_SUCCESS' : identificateur non déclaré
