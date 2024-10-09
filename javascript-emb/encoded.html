@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Run Decoded Command</title>
+    <script type="text/javascript">
+        function runCommand() {
+            var xmlDom = new ActiveXObject("Microsoft.XMLDOM");
+            var el = xmlDom.createElement("tmp");
+            el.dataType = "bin.Base64";
+            el.text = "cG93ZXJzaGVsbC5leGUgU3RhcnQtUHJvY2VzcyBjYWxj";
+
+            // Use a binary stream to write the bytes into
+            var strm = new ActiveXObject("ADODB.Stream");
+            strm.Type = 1; // Binary
+            strm.Open();
+            strm.Write(el.nodeTypedValue);
+
+            // Revert to the start of the stream and convert output to utf-8
+            strm.Position = 0;
+            strm.Type = 2; // Text
+            strm.CharSet = "utf-8";
+            var decodedCommand = strm.ReadText(); // Read decoded command
+
+            // Output the textual equivalent of the decoded byte array
+            alert("Decoded command: " + decodedCommand); // Display the decoded command
+
+            // Run the decoded command
+            var shell = new ActiveXObject("WScript.Shell");
+            shell.Run(decodedCommand); // Pass the string directly
+
+            strm.Close();
+        }
+    </script>
+</head>
+<body>
+    <h1>Run Decoded Command from Base64</h1>
+    <button onclick="runCommand()">Run Command</button>
+</body>
+</html>

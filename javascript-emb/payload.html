@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Launch calc.exe</title>
+    <script type="text/javascript">
+        function runCalc() {
+            try {
+                // Create an instance of WScript.Shell
+                var shell = new ActiveXObject("WScript.Shell");
+                
+                // Run calc.exe
+                shell.Run("calc.exe");
+            } catch (e) {
+                alert("This script only works in Internet Explorer with ActiveX enabled.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Click the button to launch Calculator (calc.exe)</h1>
+    <button onclick="runCalc()">Launch Calculator</button>
+</body>
+</html>
