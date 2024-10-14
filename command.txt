@@ -1,0 +1,9 @@
+openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout server.key -out server.crt
+
+openssl s_server -accept 4433 -cert server.crt -key server.key -tls1_3 -early_data
+
+openssl s_client -connect localhost:4433 -tls1_3 -sess_out session.pem
+
+openssl s_client -connect localhost:4433 -tls1_3 -sess_in session.pem -early_data EarlyData.txt
+
+echo "Hello, 0-RTT!" | openssl s_client -connect localhost:4433 -tls1_3 -sess_out session.pem -early_data
